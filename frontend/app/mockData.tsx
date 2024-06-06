@@ -1,4 +1,4 @@
-const mockMenu = [
+export const mockMenu = [
     {
         "item_id": "101",
         "name": "Margherita Pizza",
@@ -137,4 +137,10 @@ const mockMenu = [
         "price": 4.75,
         "category": "Desserts",
     }
+]
+
+export const mockOrders = [
+    { name: 'Burger private and convfidential', category: 'Main Course', quantity: 2, price: 5.99 },
+    { name: 'Fries', category: 'Appetizer', quantity: 1, price: 2.99 },
+    { name: 'Coke rontiec dhurhum road', category: 'Beverage', quantity: 3, price: 1.50 },
 ]

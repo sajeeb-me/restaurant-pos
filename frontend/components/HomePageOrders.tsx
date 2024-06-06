@@ -1,21 +1,27 @@
 // components/HomePageOrders.tsx
 
+'use client'
+
+import { useState } from "react";
 import ClientOrderItem from "./shared/ClientOrderItem";
+import { mockOrders } from "@/app/mockData";
 
 
-interface OrderItem {
+interface OrderItemProps {
     name: string;
     category: string;
     quantity: number;
     price: number;
 }
 
-const HomePageOrders = async () => {
-    const orders: OrderItem[] = [
-        { name: 'Burger private and convfidential', category: 'Main Course', quantity: 2, price: 5.99 },
-        { name: 'Fries', category: 'Appetizer', quantity: 1, price: 2.99 },
-        { name: 'Coke rontiec dhurhum road', category: 'Beverage', quantity: 3, price: 1.50 },
-    ];
+const HomePageOrders: React.FC<OrderItemProps> = () => {
+    const [orders, setOrders] = useState<OrderItemProps[]>(mockOrders);
+
+    const handleQuantityChange = (index: number, newQuantity: number) => {
+        const updatedOrders = [...orders];
+        updatedOrders[index].quantity = newQuantity;
+        setOrders(updatedOrders);
+    };
 
     const calculateTotal = () => {
         return orders.reduce((total, order) => total + (order.price * order.quantity), 0).toFixed(2);
@@ -36,10 +42,12 @@ const HomePageOrders = async () => {
                 {orders.map((order, index) => (
                     <ClientOrderItem
                         key={index}
+                        index={index}
                         name={order.name}
                         category={order.category}
                         quantity={order.quantity}
                         price={order.price}
+                        onQuantityChange={handleQuantityChange}
                     />
                 ))}
             </div>

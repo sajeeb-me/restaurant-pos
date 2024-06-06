@@ -1,26 +1,24 @@
-// components/ClientOrderItem.tsx
-
-'use client'; // This directive is necessary to indicate this is a client component in Next.js
+// components/shared/ClientOrderItem.tsx
 
 import React, { useState } from 'react';
 
 interface ClientOrderItemProps {
+    index: number;
     name: string;
     category: string;
     quantity: number;
     price: number;
+    onQuantityChange: (index: number, newQuantity: number) => void;
 }
 
-const ClientOrderItem: React.FC<ClientOrderItemProps> = ({ name, category, quantity: initialQuantity, price }) => {
-    const [quantity, setQuantity] = useState<number>(initialQuantity);
-
+const ClientOrderItem: React.FC<ClientOrderItemProps> = ({ index, name, category, quantity, price, onQuantityChange }) => {
     const incrementQuantity = () => {
-        setQuantity(quantity + 1);
+        onQuantityChange(index, quantity + 1);
     };
 
     const decrementQuantity = () => {
         if (quantity > 1) {
-            setQuantity(quantity - 1);
+            onQuantityChange(index, quantity - 1);
         }
     };
 
