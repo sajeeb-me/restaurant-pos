@@ -146,7 +146,7 @@ export const mockOrders = [
 ]
 
 
-const mockDrinks = [
+export const mockDrinks = [
     {
         "name": "Roos Estate Sauvignon Blanc South Africa",
         "prices": [

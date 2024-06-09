@@ -14,7 +14,7 @@ interface OrderItemProps {
     price: number;
 }
 
-const HomePageOrders: React.FC<OrderItemProps> = () => {
+const HomePageOrders: React.FC = () => {
     const [orders, setOrders] = useState<OrderItemProps[]>(mockOrders);
 
     const handleQuantityChange = (index: number, newQuantity: number) => {
