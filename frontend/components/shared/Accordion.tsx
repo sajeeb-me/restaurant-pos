@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { MdArrowForwardIos } from "react-icons/md";
 
 interface AccordionItem {
     title: string;
@@ -11,18 +12,18 @@ const Accordion: React.FC<{ items: AccordionItem[] }> = ({ items }) => {
     return (
         <div>
             <div
-                className="text-lg font-semibold cursor-pointer bg-primary/20 p1-4 rounded text-center"
+                className="font-semibold cursor-pointer bg-primary/20 rounded text-center flex justify-between items-center gap-2 px-2 py-1 hover:bg-primary/10 transition duration-300"
                 onClick={() => setClicked(!clicked)}
             >
-                Drinks menu
-                <span> fdsf</span>
+                Drinks Menu
+                <MdArrowForwardIos className={`text-xs ${clicked && "rotate-90"} duration-300`} />
             </div>
             {clicked && (
-                <ul className="list-none p-0">
+                <ul className="border-l pl-3 ml-2 mt-1 border-primary">
                     {items.map((item) => (
                         <li key={item.title} className="mb-2">
                             <button
-                                className="text-left w-full focus:outline-none hover:text-gray-200 text-base font-medium cursor-pointer flex justify-between items-center bg-transparent"
+                                className="text-left w-full focus:outline-none hover:text-gray-300 text-sm cursor-pointer flex justify-between items-center bg-transparent"
                                 onClick={item.onClick}
                             >
                                 {item.title}
