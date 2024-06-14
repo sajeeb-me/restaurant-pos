@@ -15,7 +15,7 @@ const Accordion: React.FC<{ items: AccordionItem[] }> = ({ items }) => {
                 className="font-semibold cursor-pointer bg-primary/20 rounded text-center flex justify-between items-center gap-2 px-2 py-1 hover:bg-primary/10 transition duration-300"
                 onClick={() => setClicked(!clicked)}
             >
-                Drinks Menu
+                <span className={`${clicked && 'text-primary'}`} >Drinks Menu</span>
                 <MdArrowForwardIos className={`text-xs ${clicked && "rotate-90"} duration-300`} />
             </div>
             {clicked && (

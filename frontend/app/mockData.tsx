@@ -149,7 +149,7 @@ export const mockOrders = [
 export const mockDrinks = [
     {
         "name": "Roos Estate Sauvignon Blanc South Africa",
-        "prices": [
+        "price": [
             {
                 "type": "glass",
                 "price": "5.95"
@@ -164,7 +164,7 @@ export const mockDrinks = [
     },
     {
         "name": "Jacana Chardonnay Australia",
-        "prices": [
+        "price": [
             {
                 "type": "bottle",
                 "price": "18.95"
@@ -175,7 +175,7 @@ export const mockDrinks = [
     },
     {
         "name": "Chablis, Domaine du Colombier",
-        "prices": [
+        "price": [
             {
                 "type": "bottle",
                 "price": "24.95"
@@ -186,7 +186,7 @@ export const mockDrinks = [
     },
     {
         "name": "Pacific Heights Zinfandel Blush California",
-        "prices": [
+        "price": [
             {
                 "type": "glass",
                 "price": "5.95"
@@ -201,7 +201,7 @@ export const mockDrinks = [
     },
     {
         "name": "Sapuri Pinot Grigio Rose Italy",
-        "prices": [
+        "price": [
             {
                 "type": "bottle",
                 "price": "18.95"
@@ -212,7 +212,7 @@ export const mockDrinks = [
     },
     {
         "name": "Roos Estate Merlot South Africa",
-        "prices": [
+        "price": [
             {
                 "type": "glass",
                 "price": "5.95"
@@ -227,7 +227,7 @@ export const mockDrinks = [
     },
     {
         "name": "Elements Atorum Malbec",
-        "prices": [
+        "price": [
             {
                 "type": "bottle",
                 "price": "21.95"
@@ -238,7 +238,7 @@ export const mockDrinks = [
     },
     {
         "name": "Navardia Rioja Bodegas Bagordi Spain",
-        "prices": [
+        "price": [
             {
                 "type": "bottle",
                 "price": "22.95"
@@ -249,7 +249,7 @@ export const mockDrinks = [
     },
     {
         "name": "Prosecco Di Maria Italy",
-        "prices": [
+        "price": [
             {
                 "type": "bottle",
                 "price": "20.95"
@@ -264,7 +264,7 @@ export const mockDrinks = [
     },
     {
         "name": "Freixenet Prosecco Italy",
-        "prices": [
+        "price": [
             {
                 "type": "bottle",
                 "price": "22.95"
@@ -275,7 +275,7 @@ export const mockDrinks = [
     },
     {
         "name": "Moet & Chandon Brut NV",
-        "prices": [
+        "price": [
             {
                 "type": "bottle",
                 "price": "49.95"
@@ -286,7 +286,7 @@ export const mockDrinks = [
     },
     {
         "name": "Bollinger Special Cuvee NV",
-        "prices": [
+        "price": [
             {
                 "type": "bottle",
                 "price": "62.95"
@@ -531,7 +531,7 @@ export const mockDrinks = [
     },
     {
         "name": "Pepsi",
-        "prices": [
+        "price": [
             {
                 "type": "small",
                 "price": "2.75"
@@ -546,7 +546,7 @@ export const mockDrinks = [
     },
     {
         "name": "Diet Pepsi",
-        "prices": [
+        "price": [
             {
                 "type": "small",
                 "price": "2.75"
@@ -561,7 +561,7 @@ export const mockDrinks = [
     },
     {
         "name": "Lemonade",
-        "prices": [
+        "price": [
             {
                 "type": "small",
                 "price": "2.75"
@@ -576,7 +576,7 @@ export const mockDrinks = [
     },
     {
         "name": "Orange Juice",
-        "prices": [
+        "price": [
             {
                 "type": "small",
                 "price": "2.75"
@@ -591,7 +591,7 @@ export const mockDrinks = [
     },
     {
         "name": "Pineapple Juice",
-        "prices": [
+        "price": [
             {
                 "type": "small",
                 "price": "2.95"
@@ -602,7 +602,7 @@ export const mockDrinks = [
     },
     {
         "name": "Apple Juice",
-        "prices": [
+        "price": [
             {
                 "type": "small",
                 "price": "2.95"
@@ -613,7 +613,7 @@ export const mockDrinks = [
     },
     {
         "name": "J20",
-        "prices": [
+        "price": [
             {
                 "type": "small",
                 "price": "2.95"
@@ -624,7 +624,7 @@ export const mockDrinks = [
     },
     {
         "name": "Water - Still / Sparkling",
-        "prices": [
+        "price": [
             {
                 "type": "small",
                 "price": "2.95"
@@ -639,7 +639,7 @@ export const mockDrinks = [
     },
     {
         "name": "Soda Water",
-        "prices": [
+        "price": [
             {
                 "type": "small",
                 "price": "2.95"
@@ -656,7 +656,7 @@ export const mockDrinks = [
     },
     {
         "name": "Cordial Drinks",
-        "prices": [
+        "price": [
             {
                 "type": "small",
                 "price": "1.00"
