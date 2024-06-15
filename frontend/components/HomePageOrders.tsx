@@ -6,6 +6,10 @@ import { useState } from "react";
 import ClientOrderItem from "./shared/ClientOrderItem";
 import { mockOrders } from "@/app/mockData";
 
+interface HomePageOrdersProps {
+    cart: any[];
+    setCart: any;
+}
 
 interface OrderItemProps {
     name: string;
@@ -14,7 +18,7 @@ interface OrderItemProps {
     price: number;
 }
 
-const HomePageOrders: React.FC = () => {
+const HomePageOrders: React.FC<HomePageOrdersProps> = ({cart, setCart}) => {
     const [orders, setOrders] = useState<OrderItemProps[]>(mockOrders);
 
     const handleQuantityChange = (index: number, newQuantity: number) => {

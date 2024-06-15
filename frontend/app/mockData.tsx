@@ -149,7 +149,7 @@ export const mockOrders = [
 export const mockDrinks = [
     {
         "name": "Roos Estate Sauvignon Blanc South Africa",
-        "price": [
+        "prices": [
             {
                 "type": "glass",
                 "price": "5.95"
@@ -164,7 +164,7 @@ export const mockDrinks = [
     },
     {
         "name": "Jacana Chardonnay Australia",
-        "price": [
+        "prices": [
             {
                 "type": "bottle",
                 "price": "18.95"
@@ -175,7 +175,7 @@ export const mockDrinks = [
     },
     {
         "name": "Chablis, Domaine du Colombier",
-        "price": [
+        "prices": [
             {
                 "type": "bottle",
                 "price": "24.95"
@@ -186,7 +186,7 @@ export const mockDrinks = [
     },
     {
         "name": "Pacific Heights Zinfandel Blush California",
-        "price": [
+        "prices": [
             {
                 "type": "glass",
                 "price": "5.95"
@@ -201,7 +201,7 @@ export const mockDrinks = [
     },
     {
         "name": "Sapuri Pinot Grigio Rose Italy",
-        "price": [
+        "prices": [
             {
                 "type": "bottle",
                 "price": "18.95"
@@ -212,7 +212,7 @@ export const mockDrinks = [
     },
     {
         "name": "Roos Estate Merlot South Africa",
-        "price": [
+        "prices": [
             {
                 "type": "glass",
                 "price": "5.95"
@@ -227,7 +227,7 @@ export const mockDrinks = [
     },
     {
         "name": "Elements Atorum Malbec",
-        "price": [
+        "prices": [
             {
                 "type": "bottle",
                 "price": "21.95"
@@ -238,7 +238,7 @@ export const mockDrinks = [
     },
     {
         "name": "Navardia Rioja Bodegas Bagordi Spain",
-        "price": [
+        "prices": [
             {
                 "type": "bottle",
                 "price": "22.95"
@@ -249,7 +249,7 @@ export const mockDrinks = [
     },
     {
         "name": "Prosecco Di Maria Italy",
-        "price": [
+        "prices": [
             {
                 "type": "bottle",
                 "price": "20.95"
@@ -264,7 +264,7 @@ export const mockDrinks = [
     },
     {
         "name": "Freixenet Prosecco Italy",
-        "price": [
+        "prices": [
             {
                 "type": "bottle",
                 "price": "22.95"
@@ -275,7 +275,7 @@ export const mockDrinks = [
     },
     {
         "name": "Moet & Chandon Brut NV",
-        "price": [
+        "prices": [
             {
                 "type": "bottle",
                 "price": "49.95"
@@ -286,7 +286,7 @@ export const mockDrinks = [
     },
     {
         "name": "Bollinger Special Cuvee NV",
-        "price": [
+        "prices": [
             {
                 "type": "bottle",
                 "price": "62.95"
@@ -297,241 +297,436 @@ export const mockDrinks = [
     },
     {
         "name": "Delhi 6 Crush",
-        "price": "6.95",
+        "prices": [
+            {
+                "type" : "single",
+                "price": "6.95",
+            }
+        ],
         "category": "Cocktails",
         "main_category": "Cocktails"
     },
     {
         "name": "Moscow Mule",
-        "price": "6.95",
+        "prices": [
+            {
+                "type" : "single",
+                "price": "6.95",
+            }
+        ],
         "category": "Cocktails",
         "main_category": "Cocktails"
     },
     {
         "name": "Blue Mumbai",
-        "price": "6.95",
+        "prices": [
+            {
+                "type" : "single",
+                "price": "6.95",
+            }
+        ],
         "category": "Cocktails",
         "main_category": "Cocktails"
     },
     {
         "name": "Delhi Sunrise",
-        "price": "6.95",
+        "prices": [
+            {
+                "type" : "single",
+                "price": "6.95",
+            }
+        ],
         "category": "Cocktails",
         "main_category": "Cocktails"
     },
     {
         "name": "Bombay Mango",
-        "price": "6.95",
+        "prices": [
+            {
+                "type" : "single",
+                "price": "6.95",
+            }
+        ],
         "category": "Cocktails",
         "main_category": "Cocktails"
     },
     {
         "name": "Calcutta Mojito",
-        "price": "4.95",
+        "prices": [
+            {
+                "type" : "single",
+                "price": "4.95",
+            }
+        ],
         "category": "Mocktails",
         "main_category": "Mocktails"
     },
     {
         "name": "Delhi Summer",
-        "price": "4.95",
+        "prices": [
+            {
+                "type" : "single",
+                "price": "4.95",
+            }
+        ],
         "category": "Mocktails",
         "main_category": "Mocktails"
     },
     {
         "name": "Blue Mango",
-        "price": "4.95",
+        "prices": [
+            {
+                "type" : "single",
+                "price": "4.95",
+            }
+        ],
         "category": "Mocktails",
         "main_category": "Mocktails"
     },
     {
         "name": "Goa Sunset",
-        "price": "4.95",
+        "prices": [
+            {
+                "type" : "single",
+                "price": "4.95",
+            }
+        ],
         "category": "Mocktails",
         "main_category": "Mocktails"
     },
     {
         "name": "Cobra Pint",
-        "price": "5.25",
+        "prices": [
+            {
+                "type" : "single",
+                "price": "5.25",
+            }
+        ],
         "category": "Draught",
         "main_category": "Draught"
     },
     {
         "name": "Cobra Half",
-        "price": "3.30",
+        "prices": [
+            {
+                "type" : "single",
+                "price": "3.30",
+            }
+        ],
         "category": "Draught",
         "main_category": "Draught"
     },
     {
         "name": "San Miguel",
-        "price": "3.65",
+        "prices": [
+            {
+                "type" : "single",
+                "price": "3.65",
+            }
+        ],
         "category": "Bottle Drinks",
         "main_category": "Bottle Drinks"
     },
     {
         "name": "Kingfisher",
-        "price": "3.65",
+        "prices": [
+            {
+                "type" : "single",
+                "price": "3.65",
+            }
+        ],
         "category": "Bottle Drinks",
         "main_category": "Bottle Drinks"
     },
     {
         "name": "Desperados",
-        "price": "3.95",
+        "prices": [
+            {
+                "type" : "single",
+                "price": "3.95",
+            }
+        ],
         "category": "Bottle Drinks",
         "main_category": "Bottle Drinks"
     },
     {
         "name": "Magners",
-        "price": "4.25",
+        "prices": [
+            {
+                "type" : "single",
+                "price": "4.25",
+            }
+        ],
         "category": "Bottle Drinks",
         "main_category": "Bottle Drinks"
     },
     {
         "name": "Kopparberg (Mixed fruit)",
-        "price": "4.25",
+        "prices": [
+            {
+                "type" : "single",
+                "price": "4.25",
+            }
+        ],
         "category": "Bottle Drinks",
         "main_category": "Bottle Drinks"
     },
     {
         "name": "Cobra",
-        "price": "3.65",
+        "prices": [
+            {
+                "type" : "single",
+                "price": "3.65",
+            }
+        ],
         "category": "Bottle Drinks",
         "main_category": "Bottle Drinks"
     },
     {
         "name": "Non-Alcoholic Cobra",
-        "price": "3.50",
+        "prices": [
+            {
+                "type" : "single",
+                "price": "3.50",
+            }
+        ],
         "category": "Bottle Drinks",
         "main_category": "Bottle Drinks"
     },
     {
         "name": "Smirnoff",
-        "price": "3.50",
+        "prices": [
+            {
+                "type" : "single",
+                "price": "3.50",
+            }
+        ],
         "category": "Spirits and Liqueurs",
         "main_category": "Spirits and Liqueurs"
     },
     {
         "name": "Gordon's Gin",
-        "price": "3.50",
+        "prices": [
+            {
+                "type" : "single",
+                "price": "3.50",
+            }
+        ],
         "category": "Spirits and Liqueurs",
         "main_category": "Spirits and Liqueurs"
     },
     {
         "name": "Gordon's Pink Gin",
-        "price": "3.50",
+        "prices": [
+            {
+                "type" : "single",
+                "price": "3.50",
+            }
+        ],
         "category": "Spirits and Liqueurs",
         "main_category": "Spirits and Liqueurs"
     },
     {
         "name": "Bombay Sapphire",
-        "price": "3.95",
+        "prices": [
+            {
+                "type" : "single",
+                "price": "3.95",
+            }
+        ],
         "category": "Spirits and Liqueurs",
         "main_category": "Spirits and Liqueurs"
     },
     {
         "name": "Whitley Neill",
-        "price": "4.90",
+        "prices": [
+            {
+                "type" : "single",
+                "price": "4.90",
+            }
+        ],
         "category": "Spirits and Liqueurs",
         "main_category": "Spirits and Liqueurs"
     },
     {
         "name": "Bacardi",
-        "price": "3.90",
+        "prices": [
+            {
+                "type" : "single",
+                "price": "3.90",
+            }
+        ],
         "category": "Spirits and Liqueurs",
         "main_category": "Spirits and Liqueurs"
     },
     {
         "name": "Navy Rum",
-        "price": "3.90",
+        "prices": [
+            {
+                "type" : "single",
+                "price": "3.90",
+            }
+        ],
         "category": "Spirits and Liqueurs",
         "main_category": "Spirits and Liqueurs"
     },
     {
         "name": "Old J Spiced Rum",
-        "price": "3.90",
+        "prices": [
+            {
+                "type" : "single",
+                "price": "3.90",
+            }
+        ],
         "category": "Spirits and Liqueurs",
         "main_category": "Spirits and Liqueurs"
     },
     {
         "name": "Jack Daniels",
-        "price": "3.90",
+        "prices": [
+            {
+                "type" : "single",
+                "price": "3.90",
+            }
+        ],
         "category": "Spirits and Liqueurs",
         "main_category": "Spirits and Liqueurs"
     },
     {
         "name": "Southern Comfort",
-        "price": "3.90",
+        "prices": [
+            {
+                "type" : "single",
+                "price": "3.90",
+            }
+        ],
         "category": "Spirits and Liqueurs",
         "main_category": "Spirits and Liqueurs"
     },
     {
         "name": "Archers",
-        "price": "3.90",
+        "prices": [
+            {
+                "type" : "single",
+                "price": "3.90",
+            }
+        ],
         "category": "Spirits and Liqueurs",
         "main_category": "Spirits and Liqueurs"
     },
     {
         "name": "Tia Maria",
-        "price": "3.90",
+        "prices": [
+            {
+                "type" : "single",
+                "price": "3.90",
+            }
+        ],
         "category": "Spirits and Liqueurs",
         "main_category": "Spirits and Liqueurs"
     },
     {
         "name": "Sambuca",
-        "price": "3.90",
+        "prices": [
+            {
+                "type" : "single",
+                "price": "3.90",
+            }
+        ],
         "category": "Spirits and Liqueurs",
         "main_category": "Spirits and Liqueurs"
     },
     {
         "name": "Tequila",
-        "price": "3.90",
+        "prices": [
+            {
+                "type" : "single",
+                "price": "3.90",
+            }
+        ],
         "category": "Spirits and Liqueurs",
         "main_category": "Spirits and Liqueurs"
     },
     {
         "name": "Cointreau",
-        "price": "3.90",
+        "prices": [
+            {
+                "type" : "single",
+                "price": "3.90",
+            }
+        ],
         "category": "Spirits and Liqueurs",
         "main_category": "Spirits and Liqueurs"
     },
     {
         "name": "Disaronno",
-        "price": "3.90",
+        "prices": [
+            {
+                "type" : "single",
+                "price": "3.90",
+            }
+        ],
         "category": "Spirits and Liqueurs",
         "main_category": "Spirits and Liqueurs"
     },
     {
         "name": "Martini",
-        "price": "3.90",
+        "prices": [
+            {
+                "type" : "single",
+                "price": "3.90",
+            }
+        ],
         "category": "Spirits and Liqueurs",
         "main_category": "Spirits and Liqueurs"
     },
     {
         "name": "Pernod",
-        "price": "3.90",
+        "prices": [
+            {
+                "type" : "single",
+                "price": "3.90",
+            }
+        ],
         "category": "Spirits and Liqueurs",
         "main_category": "Spirits and Liqueurs"
     },
     {
         "name": "Baileys",
-        "price": "3.90",
+        "prices": [
+            {
+                "type" : "single",
+                "price": "3.90",
+            }
+        ],
         "category": "Spirits and Liqueurs",
         "main_category": "Spirits and Liqueurs"
     },
     {
         "name": "Courvoisier",
-        "price": "4.10",
+        "prices": [
+            {
+                "type" : "single",
+                "price": "4.10",
+            }
+        ],
         "category": "Spirits and Liqueurs",
         "main_category": "Spirits and Liqueurs"
     },
     {
         "name": "Remy Martin",
-        "price": "4.10",
+        "prices": [
+            {
+                "type" : "single",
+                "price": "4.10",
+            }
+        ],
         "category": "Spirits and Liqueurs",
         "main_category": "Spirits and Liqueurs"
     },
     {
         "name": "Pepsi",
-        "price": [
+        "prices": [
             {
                 "type": "small",
                 "price": "2.75"
@@ -546,7 +741,7 @@ export const mockDrinks = [
     },
     {
         "name": "Diet Pepsi",
-        "price": [
+        "prices": [
             {
                 "type": "small",
                 "price": "2.75"
@@ -561,7 +756,7 @@ export const mockDrinks = [
     },
     {
         "name": "Lemonade",
-        "price": [
+        "prices": [
             {
                 "type": "small",
                 "price": "2.75"
@@ -576,7 +771,7 @@ export const mockDrinks = [
     },
     {
         "name": "Orange Juice",
-        "price": [
+        "prices": [
             {
                 "type": "small",
                 "price": "2.75"
@@ -591,7 +786,7 @@ export const mockDrinks = [
     },
     {
         "name": "Pineapple Juice",
-        "price": [
+        "prices": [
             {
                 "type": "small",
                 "price": "2.95"
@@ -602,7 +797,7 @@ export const mockDrinks = [
     },
     {
         "name": "Apple Juice",
-        "price": [
+        "prices": [
             {
                 "type": "small",
                 "price": "2.95"
@@ -613,7 +808,7 @@ export const mockDrinks = [
     },
     {
         "name": "J20",
-        "price": [
+        "prices": [
             {
                 "type": "small",
                 "price": "2.95"
@@ -624,7 +819,7 @@ export const mockDrinks = [
     },
     {
         "name": "Water - Still / Sparkling",
-        "price": [
+        "prices": [
             {
                 "type": "small",
                 "price": "2.95"
@@ -639,7 +834,7 @@ export const mockDrinks = [
     },
     {
         "name": "Soda Water",
-        "price": [
+        "prices": [
             {
                 "type": "small",
                 "price": "2.95"
@@ -650,13 +845,18 @@ export const mockDrinks = [
     },
     {
         "name": "Dash of Cordial",
-        "price": "0.30",
+        "prices": [
+            {
+                "type" : "single",
+                "price": "0.30",
+            }
+        ],
         "category": "Soft Drinks",
         "main_category": "Soft Drinks"
     },
     {
         "name": "Cordial Drinks",
-        "price": [
+        "prices": [
             {
                 "type": "small",
                 "price": "1.00"
@@ -671,25 +871,45 @@ export const mockDrinks = [
     },
     {
         "name": "Bottle Coke",
-        "price": "2.95",
+        "prices": [
+            {
+                "type" : "single",
+                "price": "2.95",
+            }
+        ],
         "category": "Soft Drinks",
         "main_category": "Soft Drinks"
     },
     {
         "name": "Bottle Diet Coke",
-        "price": "2.95",
+        "prices": [
+            {
+                "type" : "single",
+                "price": "2.95",
+            }
+        ],
         "category": "Soft Drinks",
         "main_category": "Soft Drinks"
     },
     {
         "name": "Bottle Lemonade",
-        "price": "2.95",
+        "prices": [
+            {
+                "type" : "single",
+                "price": "2.95",
+            }
+        ],
         "category": "Soft Drinks",
         "main_category": "Soft Drinks"
     },
     {
         "name": "Slimline Tonic",
-        "price": "2.20",
+        "prices": [
+            {
+                "type" : "single",
+                "price": "2.20",
+            }
+        ],
         "category": "Soft Drinks",
         "main_category": "Soft Drinks"
     }
