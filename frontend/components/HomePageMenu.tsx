@@ -10,7 +10,7 @@ const HomePageMenu: React.FC = () => {
     });
     const mainCategories = Array.from(new Set(drinks.map(item => item.main_category)));
     // console.log(mainCategories);
-    console.log(drinks)
+    // console.log(drinks)
     const [selectedCategory, setSelectedCategory] = useState<string | null>(null);
 
     const handleCategoryClick = (category: string) => {
@@ -49,7 +49,7 @@ const HomePageMenu: React.FC = () => {
                                         {Array.isArray(item.price) ? (
                                             <div className='grid grid-cols-2 gap-2'>
                                                 {item.price.map((price) => (
-                                                    <div key={price.type} className="bg-primary/20 p-2 rounded-lg cursor-pointer hover:bg-primary/30 transition duration-300">
+                                                    <div key={price.type} className="bg-primary/20 p-2 rounded-lg cursor-pointer hover:bg-primary/50 transition duration-300">
                                                         <span className='capitalize'>{price.type.length > 6 ? `${price.type.slice(0, 6)}...` : price.type} : </span>
                                                         <span>£{price.price}</span>
                                                     </div>

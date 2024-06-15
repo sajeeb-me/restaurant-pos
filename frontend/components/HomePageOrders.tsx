@@ -34,8 +34,8 @@ const HomePageOrders: React.FC = () => {
                     <h2 className="text-xl font-semibold">Table No: 5</h2>
                     <h3 className="font-semibold text-gray-400">Order ID: #12345</h3>
                 </div>
-                <div className='grid grid-cols-3 font-bold mb-3'>
-                    <p>Item</p>
+                <div className='grid grid-cols-3 font-bold mb-3 text-primary'>
+                    <p>Items</p>
                     <p className='text-right pr-4'>Quantity</p>
                     <p className='text-right pr-2'>Price</p>
                 </div>

@@ -23,7 +23,7 @@ const Accordion: React.FC<{ items: AccordionItem[] }> = ({ items }) => {
                     {items.map((item) => (
                         <li key={item.title} className="mb-2">
                             <button
-                                className="text-left w-full focus:outline-none hover:text-gray-300 text-sm cursor-pointer flex justify-between items-center bg-transparent"
+                                className={`text-left w-full focus:outline-none hover:text-gray-300 text-sm cursor-pointer flex justify-between items-center bg-transparent`}
                                 onClick={item.onClick}
                             >
                                 {item.title}
