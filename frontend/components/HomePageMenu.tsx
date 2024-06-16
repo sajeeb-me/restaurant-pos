@@ -32,7 +32,7 @@ const HomePageMenu: React.FC<HomePageMenuProps> = ({ cart, setCart }) => {
         const existingItem = cart.find((cartItem) => cartItem.id === item.id && cartItem.selectedItem?.type === item.selectedItem?.type);
         if (existingItem) {
             const updatedCart = cart.map((cartItem) =>
-                cartItem.id === item.id ? { ...cartItem, quantity: cartItem.quantity + 1 } : cartItem
+                (cartItem.id === item.id && cartItem.selectedItem?.type == item.selectedItem?.type) ? { ...cartItem, quantity: cartItem.quantity + 1 } : cartItem
             );
             setCart(updatedCart);
         } else {
