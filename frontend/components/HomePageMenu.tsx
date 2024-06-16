@@ -62,9 +62,9 @@ const HomePageMenu: React.FC<HomePageMenuProps> = ({ cart, setCart }) => {
                         {drinks
                             .filter((item) => item.main_category === selectedCategory)
                             .map((item) => (
-                                <div
+                                <button
                                     key={item.id}
-                                    className={`bg-black/30 backdrop-blur-md backdrop-saturate-150 p-2 rounded-lg border border-transparent hover:border-primary/50 transition duration-300  
+                                    className={`text-left bg-black/30 backdrop-blur-md backdrop-saturate-150 p-2 rounded-lg border border-transparent hover:border-primary/50 transition duration-300  
                                         ${(item.prices.length == 1 || item.prices[0].type == 'single') && "cursor-pointer hover:bg-black/50 transition duration-300"}`}
                                     onClick={item.prices.length === 1 ? () => handleAddToCart(item) : () => { }}
                                 >
@@ -73,21 +73,21 @@ const HomePageMenu: React.FC<HomePageMenuProps> = ({ cart, setCart }) => {
                                         {item.prices.length > 1 || item.prices[0].type != 'single' ? (
                                             <div className='grid grid-cols-2 gap-2'>
                                                 {item.prices.map((price) => (
-                                                    <div
+                                                    <button
                                                         key={price.type}
                                                         className="bg-primary/20 p-2 rounded-lg cursor-pointer hover:bg-primary/50 transition duration-300"
                                                         onClick={() => handleAddToCart({ ...item, selectedItem: price })}
                                                     >
                                                         <span className='capitalize'>{price.type.length > 6 ? `${price.type.slice(0, 6)}...` : price.type} : </span>
                                                         <span>£{price.price}</span>
-                                                    </div>
+                                                    </button>
                                                 ))}
                                             </div>
                                         ) : (
                                             <p>Price: £{item.prices[0].price}</p>
                                         )}
                                     </div>
-                                </div>
+                                </button>
                             ))}
                     </div>
                 ) : (
