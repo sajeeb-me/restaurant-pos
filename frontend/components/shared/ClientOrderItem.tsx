@@ -29,13 +29,14 @@ const ClientOrderItem: React.FC<ClientOrderItemProps> = ({ index, name, category
         <div className="mb-4">
             <div className="grid grid-cols-3">
                 <div className=''>
-                    <h3 className="font-semibold">{name.length > 11 ? `${name.slice(0, 11)}...` : name} {type != 'single' && `(${type.slice(0, 1).toUpperCase()})`}</h3>
+                    <h3 className="font-semibold">{name.length > 11 ? `${name.slice(0, 11)}...` : name} <span className='text-xs'>{type != 'single' && `(${type.slice(0, 1).toUpperCase()})`}</span> </h3>
                     <p className="text-gray-400 text-xs">{category.length > 20 ? `${category.slice(0, 20)}...` : category}</p>
                 </div>
                 <div className="flex items-center justify-end ">
                     <button
                         onClick={decrementQuantity}
-                        className="bg-red-500 text-white px-2 py-1 rounded-l"
+                        className="bg-red-500 text-white px-2 py-1 rounded-l disabled:opacity-50 disabled:cursor-not-allowed"
+                        disabled={quantity === 1}
                     >
                         -
                     </button>
@@ -49,12 +50,12 @@ const ClientOrderItem: React.FC<ClientOrderItemProps> = ({ index, name, category
                 </div>
                 <div className='flex justify-end items-center gap-2'>
                     <div className="text-right">
-                        <p className="font-semibold">${(Number(price) * Number(quantity)).toFixed(2)}</p>
-                        <p className="text-gray-400 text-xs">${Number(price).toFixed(2)} each</p>
+                        <p className="font-semibold">£{(Number(price) * Number(quantity)).toFixed(2)}</p>
+                        <p className="text-gray-400 text-xs">£{Number(price).toFixed(2)} each</p>
                     </div>
                     <button
                         className="text-primary/50 hover:text-primary duration-300 text-3xl"
-                        onClick = {() => onDeleteOrder(index)}
+                        onClick={() => onDeleteOrder(index)}
                     >
                         <MdDeleteOutline />
                     </button>

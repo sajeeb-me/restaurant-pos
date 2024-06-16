@@ -65,7 +65,7 @@ const HomePageOrders: React.FC<HomePageOrdersProps> = ({ cart, setCart }) => {
             <div>
                 <div className="flex justify-between items-center mt-4 pt-4 border-t border-gray-300">
                     <h3 className="text-lg font-semibold">Total:</h3>
-                    <p className="text-lg font-semibold">${calculateTotal()}</p>
+                    <p className="text-lg font-semibold">£{calculateTotal()}</p>
                 </div>
                 <button className="w-full bg-primary text-white py-2 mt-4 rounded-lg font-medium">Print Bill</button>
             </div>
