@@ -18,17 +18,22 @@ interface OrderItemProps {
     price: number;
 }
 
-const HomePageOrders: React.FC<HomePageOrdersProps> = ({cart, setCart}) => {
-    const [orders, setOrders] = useState<OrderItemProps[]>(mockOrders);
+const HomePageOrders: React.FC<HomePageOrdersProps> = ({ cart, setCart }) => {
+    // const [orders, setOrders] = useState<OrderItemProps[]>(mockOrders);
 
     const handleQuantityChange = (index: number, newQuantity: number) => {
-        const updatedOrders = [...orders];
+        const updatedOrders = [...cart];
         updatedOrders[index].quantity = newQuantity;
-        setOrders(updatedOrders);
+        setCart(updatedOrders);
     };
 
+    const handleDeleteOrder = (index: number) => {
+        const updatedOrders = cart.filter((_, i) => i !== index);
+        setCart(updatedOrders);
+    }
+
     const calculateTotal = () => {
-        return orders.reduce((total, order) => total + (order.price * order.quantity), 0).toFixed(2);
+        return cart.reduce((total, order) => total + (order.prices[0].price * order.quantity), 0).toFixed(2);
     };
 
     return (
@@ -43,15 +48,17 @@ const HomePageOrders: React.FC<HomePageOrdersProps> = ({cart, setCart}) => {
                     <p className='text-right pr-4'>Quantity</p>
                     <p className='text-right pr-2'>Price</p>
                 </div>
-                {orders.map((order, index) => (
+                {cart.map((order, index) => (
                     <ClientOrderItem
                         key={index}
                         index={index}
                         name={order.name}
                         category={order.category}
                         quantity={order.quantity}
-                        price={order.price}
+                        price={order.prices[0].price}
+                        type={order.prices[0].type}
                         onQuantityChange={handleQuantityChange}
+                        onDeleteOrder={handleDeleteOrder}
                     />
                 ))}
             </div>
