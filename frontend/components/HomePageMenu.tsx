@@ -49,7 +49,7 @@ const HomePageMenu: React.FC<HomePageMenuProps> = ({ cart, setCart }) => {
         <section className="flex gap-4 h-full">
             {/* Include shared UI here e.g. a header or sidebar */}
             <aside className="flex-[2] h-full">
-                <div className="bg-black/30 backdrop-blur-md backdrop-saturate-150 p-4 rounded-xl h-full">
+                <div className="bg-black/40 backdrop-blur-md backdrop-saturate-150 p-4 rounded-xl h-full">
                     <Accordion items={accordionItems} />
                 </div>
             </aside>
@@ -64,8 +64,8 @@ const HomePageMenu: React.FC<HomePageMenuProps> = ({ cart, setCart }) => {
                             .map((item) => (
                                 <button
                                     key={item.id}
-                                    className={`text-left bg-black/30 backdrop-blur-md backdrop-saturate-150 p-2 rounded-lg border border-transparent hover:border-primary/50 transition duration-300  
-                                        ${(item.prices.length == 1 || item.prices[0].type == 'single') && "cursor-pointer hover:bg-black/50 transition duration-300"}`}
+                                    className={`text-left bg-black/40 backdrop-blur-md backdrop-saturate-150 p-2 rounded-lg border border-transparent hover:border-primary/50 transition duration-300  
+                                        ${(item.prices.length == 1 || item.prices[0].type == 'single') && "cursor-pointer hover:bg-primary/10 transition duration-300"}`}
                                     onClick={item.prices.length === 1 ? () => handleAddToCart(item) : () => { }}
                                 >
                                     <h2 className="font-semibold">{item.name}</h2>
@@ -78,7 +78,7 @@ const HomePageMenu: React.FC<HomePageMenuProps> = ({ cart, setCart }) => {
                                                         className="bg-primary/20 p-2 rounded-lg cursor-pointer hover:bg-primary/50 transition duration-300"
                                                         onClick={() => handleAddToCart({ ...item, selectedItem: price })}
                                                     >
-                                                        <span className='capitalize'>{price.type.length > 6 ? `${price.type.slice(0, 6)}...` : price.type} : </span>
+                                                        <span className='capitalize'>{price.type.length > 6 ? `${price.type.slice(0, 6)}..` : price.type} : </span>
                                                         <span>£{price.price}</span>
                                                     </button>
                                                 ))}
@@ -93,7 +93,7 @@ const HomePageMenu: React.FC<HomePageMenuProps> = ({ cart, setCart }) => {
                 ) : (
                     // Render children
                     <div
-                        className='flex flex-col items-center justify-center h-full bg-black/30 backdrop-blur-md backdrop-saturate-150 rounded-xl p-4 text-white text-center'
+                        className='flex flex-col items-center justify-center h-full bg-black/40 backdrop-blur-md backdrop-saturate-150 rounded-xl p-4 text-white text-center'
                     >
                         <h2 className="text-4xl font-semibold text-primary mb-2">Welcome to Delhi6 Menu</h2>
                         <p className="text-lg">Select a category to view items</p>

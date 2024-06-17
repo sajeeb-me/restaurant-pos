@@ -37,7 +37,7 @@ const HomePageOrders: React.FC<HomePageOrdersProps> = ({ cart, setCart }) => {
     };
 
     return (
-        <div className="bg-black/30 backdrop-blur-md backdrop-saturate-150 p-4 rounded-xl h-full flex flex-col justify-between">
+        <div className="bg-black/40 backdrop-blur-md backdrop-saturate-150 p-4 rounded-xl h-full flex flex-col justify-between">
             <div>
                 <div className="flex justify-between  mb-5">
                     <h2 className="text-xl font-semibold">Table No: 5</h2>
