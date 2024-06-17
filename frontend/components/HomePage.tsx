@@ -15,7 +15,6 @@ interface Product {
 const HomePage: React.FC = () => {
 
     const [cart, setCart] = useState<Product[]>([]);
-
     // console.log(cart)
 
     return (

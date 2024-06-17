@@ -48,19 +48,23 @@ const HomePageOrders: React.FC<HomePageOrdersProps> = ({ cart, setCart }) => {
                     <p className='text-right pr-4'>Quantity</p>
                     <p className='text-right pr-2'>Price</p>
                 </div>
-                {cart.map((order, index) => (
-                    <ClientOrderItem
-                        key={index}
-                        index={index}
-                        name={order.name}
-                        category={order.category}
-                        quantity={order.quantity}
-                        price={order.prices[0].price}
-                        type={order.prices[0].type}
-                        onQuantityChange={handleQuantityChange}
-                        onDeleteOrder={handleDeleteOrder}
-                    />
-                ))}
+                <div
+                    className="overflow-y-auto h-[60vh] no-scrollbar"
+                >
+                    {cart.map((order, index) => (
+                        <ClientOrderItem
+                            key={index}
+                            index={index}
+                            name={order.name}
+                            category={order.category}
+                            quantity={order.quantity}
+                            price={order.prices[0].price}
+                            type={order.prices[0].type}
+                            onQuantityChange={handleQuantityChange}
+                            onDeleteOrder={handleDeleteOrder}
+                        />
+                    ))}
+                </div>
             </div>
             <div>
                 <div className="flex justify-between items-center mt-4 pt-4 border-t border-gray-300">

@@ -31,3 +31,15 @@ body {
     text-wrap: balance;
   }
 }
+
+
+/* hide scrollbar */
+.no-scrollbar {
+  /* For WebKit-based browsers (Chrome, Safari, Opera) */
+  &::-webkit-scrollbar {
+    display: none;
+  }
+
+  /* For Firefox */
+  scrollbar-width: none;
+}
