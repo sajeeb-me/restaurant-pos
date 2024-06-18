@@ -3,9 +3,9 @@
 import { mockDrinks } from '@/app/mockData';
 import React, { useState } from 'react';
 import Accordion from './shared/Accordion';
+import CardMenu from './shared/CardMenu';
 
 interface HomePageMenuProps {
-    // define your props here
     cart: any[];
     setCart: any;
 }
@@ -15,8 +15,6 @@ const HomePageMenu: React.FC<HomePageMenuProps> = ({ cart, setCart }) => {
         return { id: index + 1, ...item };
     });
     const mainCategories = Array.from(new Set(drinks.map(item => item.main_category)));
-    // console.log(mainCategories);
-    // console.log(drinks)
     const [selectedCategory, setSelectedCategory] = useState<string | null>(null);
 
     const handleCategoryClick = (category: string) => {
@@ -32,7 +30,9 @@ const HomePageMenu: React.FC<HomePageMenuProps> = ({ cart, setCart }) => {
         const existingItem = cart.find((cartItem) => cartItem.id === item.id && cartItem.selectedItem?.type === item.selectedItem?.type);
         if (existingItem) {
             const updatedCart = cart.map((cartItem) =>
-                (cartItem.id === item.id && cartItem.selectedItem?.type == item.selectedItem?.type) ? { ...cartItem, quantity: cartItem.quantity + 1 } : cartItem
+                (cartItem.id === item.id && cartItem.selectedItem?.type == item.selectedItem?.type)
+                    ? { ...cartItem, quantity: cartItem.quantity + 1 }
+                    : cartItem
             );
             setCart(updatedCart);
         } else {
@@ -47,7 +47,6 @@ const HomePageMenu: React.FC<HomePageMenuProps> = ({ cart, setCart }) => {
 
     return (
         <section className="flex gap-4 h-full">
-            {/* Include shared UI here e.g. a header or sidebar */}
             <aside className="flex-[2] h-full">
                 <div className="bg-black/40 backdrop-blur-md backdrop-saturate-150 p-4 rounded-xl h-full">
                     <Accordion items={accordionItems} />
@@ -55,43 +54,16 @@ const HomePageMenu: React.FC<HomePageMenuProps> = ({ cart, setCart }) => {
             </aside>
             <div className="flex-[8] rounded-xl">
                 {selectedCategory ? (
-                    // Render items for the selected category
                     <div
                         className="grid grid-cols-3 gap-2"
                     >
                         {drinks
                             .filter((item) => item.main_category === selectedCategory)
                             .map((item) => (
-                                <button
-                                    key={item.id}
-                                    className={`text-left bg-black/40 backdrop-blur-md backdrop-saturate-150 p-2 rounded-lg border border-transparent hover:border-primary/50 transition duration-300  
-                                        ${(item.prices.length == 1 || item.prices[0].type == 'single') && "cursor-pointer hover:bg-primary/10 transition duration-300"}`}
-                                    onClick={item.prices.length === 1 ? () => handleAddToCart(item) : () => { }}
-                                >
-                                    <h2 className="font-semibold">{item.name}</h2>
-                                    <div className='mt-5 text-xs'>
-                                        {item.prices.length > 1 || item.prices[0].type != 'single' ? (
-                                            <div className='grid grid-cols-2 gap-2'>
-                                                {item.prices.map((price) => (
-                                                    <button
-                                                        key={price.type}
-                                                        className="bg-primary/20 p-2 rounded-lg cursor-pointer hover:bg-primary/50 transition duration-300"
-                                                        onClick={() => handleAddToCart({ ...item, selectedItem: price })}
-                                                    >
-                                                        <span className='capitalize'>{price.type.length > 6 ? `${price.type.slice(0, 6)}..` : price.type} : </span>
-                                                        <span>£{price.price}</span>
-                                                    </button>
-                                                ))}
-                                            </div>
-                                        ) : (
-                                            <p>Price: £{item.prices[0].price}</p>
-                                        )}
-                                    </div>
-                                </button>
+                               <CardMenu key={item.id} item={item} OnAddToCart={handleAddToCart} />
                             ))}
                     </div>
                 ) : (
-                    // Render children
                     <div
                         className='flex flex-col items-center justify-center h-full bg-black/40 backdrop-blur-md backdrop-saturate-150 rounded-xl p-4 text-white text-center'
                     >
