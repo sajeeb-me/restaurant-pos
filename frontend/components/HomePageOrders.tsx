@@ -4,7 +4,6 @@
 
 import { useState } from "react";
 import ClientOrderItem from "./shared/ClientOrderItem";
-import { mockOrders } from "@/app/mockData";
 
 interface HomePageOrdersProps {
     cart: any[];
@@ -19,7 +18,7 @@ interface OrderItemProps {
 }
 
 const HomePageOrders: React.FC<HomePageOrdersProps> = ({ cart, setCart }) => {
-    // const [orders, setOrders] = useState<OrderItemProps[]>(mockOrders);
+    const [tableNo, setTableNo] = useState(1);
 
     const handleQuantityChange = (index: number, newQuantity: number) => {
         const updatedOrders = [...cart];
@@ -40,8 +39,21 @@ const HomePageOrders: React.FC<HomePageOrdersProps> = ({ cart, setCart }) => {
         <div className="bg-black/40 backdrop-blur-md backdrop-saturate-150 p-4 rounded-xl h-full flex flex-col justify-between">
             <div>
                 <div className="flex justify-between  mb-5">
-                    <h2 className="text-xl font-semibold">Table No: 5</h2>
-                    <h3 className="font-semibold text-gray-400">Order ID: #12345</h3>
+                    <h2 className="text-lg font-semibold">
+                        Table no:
+                        <select
+                            className="bg-transparent border-b border-primary ml-2 w-12 text-center outline-none"
+                            // onClick={(e) => setTableNo(parseInt((e.target as HTMLInputElement).value))}
+                            onChange={(e: React.ChangeEvent<HTMLSelectElement>) => setTableNo(parseInt(e.target.value))}
+                        >
+                            {Array.from({ length: 11 }, (_, index) => (
+                                <option key={index + 1} value={index + 1} >
+                                    {index + 1}
+                                </option>
+                            ))}
+                        </select>
+                    </h2>
+                    <h3 className="font-semibold text-primary/40">Order ID: #12345</h3>
                 </div>
                 <div className='grid grid-cols-3 font-bold mb-3 text-primary'>
                     <p>Items</p>
@@ -71,7 +83,16 @@ const HomePageOrders: React.FC<HomePageOrdersProps> = ({ cart, setCart }) => {
                     <h3 className="text-lg font-semibold">Total:</h3>
                     <p className="text-lg font-semibold">£{calculateTotal()}</p>
                 </div>
-                <button className="w-full bg-primary text-white py-2 mt-4 rounded-lg font-medium">Print Bill</button>
+                <button
+                    className="w-full bg-primary text-white py-2 mt-4 rounded-lg font-medium"
+                    onClick={() => {
+                        alert("Bill Printed");
+                        setCart([]);
+                        // setTableNo(1);
+                    }}
+                >
+                    Print Bill
+                </button>
             </div>
         </div>
     );
